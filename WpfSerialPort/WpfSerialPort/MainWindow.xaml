@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfSerialPort.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSerialPort"
+        mc:Ignorable="d"
+        Title="串口助手（@KK）" Height="473" Width="712.5">
+    <Grid>
+        <Menu x:Name="menuBar" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="704">
+            <MenuItem Header="设置(_S)">
+                <MenuItem Header="发送追加">
+                    <RadioButton x:Name ="TestNoneRadioButton" Content="无" Tag="none" Click="TestNoneRadioButton_Click"/>
+                    <RadioButton x:Name="TestRetRadioButton" Content="回车(\r)" Tag="return" Click="TestRetRadioButton_Click"/>
+                    <RadioButton x:Name="TestNewlineRadioButton" Content="新行(\n)" Tag="newline" Click="TestNewlineRadioButton_Click"/>
+                    <RadioButton x:Name="TestNewlineRetRadioButton" Content="回车新行(\r\n)" Tag="retnewline" Click="TestNewlineRetRadioButton_Click"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="视图(_V)">
+                <MenuItem x:Name="SerialSettingViewMenuItem" Header="串口配置面板" Click="SerialSettingViewMenuItem_Click" IsChecked="True"/>
+                <MenuItem x:Name="AutoSendDataSettingViewMenuItem" Header="自动发送设置面板" Click="AutoSendDataSettingViewMenuItem_Click" IsChecked="True"/>
+                <MenuItem x:Name="SerialCommunicationSettingViewMenuItem" Header="通信设置面板" IsChecked="True" Click="SerialCommunicationSettingViewMenuItem_Click"/>
+                <MenuItem x:Name="CompactViewMenuItem" Header="简洁视图" Click="CompactViewMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem  Header="帮助(_H)" >
+                <MenuItem x:Name="AboutMenuItem" Header="关于(A)" Click="AboutMenuItem_Click"/>
+                <MenuItem x:Name="HelpMenuItem" Header="软件文档(_D)" Click="HelpMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="文件(_F)"/>
+        </Menu>
+    </Grid>
+</Window>
