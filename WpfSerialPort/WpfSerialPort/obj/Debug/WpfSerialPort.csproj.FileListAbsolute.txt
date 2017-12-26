@@ -12,3 +12,17 @@ E:\Private\VSlearning\C#\WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort
 E:\Private\VSlearning\C#\WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.csproj.GenerateResource.Cache
 E:\Private\VSlearning\C#\WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.exe
 E:\Private\VSlearning\C#\WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.pdb
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\bin\Debug\WpfSerialPort.exe.config
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\bin\Debug\WpfSerialPort.exe
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\bin\Debug\WpfSerialPort.pdb
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.csprojResolveAssemblyReference.cache
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\MainWindow.g.cs
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\App.g.cs
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort_MarkupCompile.cache
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort_MarkupCompile.lref
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\MainWindow.baml
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.g.resources
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.Properties.Resources.resources
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.csproj.GenerateResource.Cache
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.exe
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.pdb

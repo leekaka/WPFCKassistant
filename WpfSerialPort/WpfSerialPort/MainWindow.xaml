@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSerialPort"
         mc:Ignorable="d"
-        Title="串口助手（@KK）" Height="473" Width="712.5">
+        Title="串口助手（@KK）" Height="505.481" Width="938.85">
     <Grid>
-        <Menu x:Name="menuBar" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="704">
+        <Menu x:Name="menuBar" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="931">
             <MenuItem Header="设置(_S)">
                 <MenuItem Header="发送追加">
                     <RadioButton x:Name ="TestNoneRadioButton" Content="无" Tag="none" Click="TestNoneRadioButton_Click"/>
@@ -28,5 +28,46 @@
             </MenuItem>
             <MenuItem Header="文件(_F)"/>
         </Menu>
+        <TextBlock HorizontalAlignment="Left" Margin="24,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="可用端"/><Run Text="口"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="24,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="通讯波特率"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="24,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="奇偶校验率"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="数据位"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.438,2.167" Height="14"><Run Text="停止位"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="24,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.438,2.167" Height="14" Text="字节编码"/>
+        <ComboBox HorizontalAlignment="Left" Margin="102,43,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" Margin="102,173,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <ComboBoxItem Content="Default"/>
+            <ComboBoxItem Content="ASCII"/>
+            <ComboBoxItem Content="Unicode"/>
+            <ComboBoxItem Content="UTF-8"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="102,147,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <ComboBoxItem Content="1"/>
+            <ComboBoxItem Content="1.5"/>
+            <ComboBoxItem Content="2"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="102,121,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <ComboBoxItem Content="8"/>
+            <ComboBoxItem Content="7"/>
+            <ComboBoxItem Content="6"/>
+            <ComboBoxItem Content="5"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="102,95,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <ComboBoxItem Content="无(none)"/>
+            <ComboBoxItem Content="偶校验(Even)"/>
+            <ComboBoxItem Content="奇校验(Odd)"/>
+            <ComboBoxItem Content="保留为0(Space)"/>
+            <ComboBoxItem Content="保留为1(Mark)"/>
+        </ComboBox>
+        <ComboBox HorizontalAlignment="Left" Margin="102,69,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="3">
+            <ComboBoxItem Content="1200"/>
+            <ComboBoxItem Content="2400"/>
+            <ComboBoxItem Content="4800"/>
+            <ComboBoxItem Content="9600" IsSelected="True"/>
+            <ComboBoxItem Content="19200"/>
+            <ComboBoxItem Content="38400"/>
+            <ComboBoxItem Content="115200"/>
+        </ComboBox>
+        <GroupBox x:Name="SerialPortConfigPanel" Header="串口配置面板" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="255" Margin="0,24,0,0"/>
     </Grid>
 </Window>
