@@ -26,3 +26,5 @@ E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\W
 E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.csproj.GenerateResource.Cache
 E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.exe
 E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\WpfSerialPort.pdb
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\About.g.cs
+E:\Private\VSlearning\C#\串口助手WPF\WpfSerialPort\WpfSerialPort\obj\Debug\About.baml

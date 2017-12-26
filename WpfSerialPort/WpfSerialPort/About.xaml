@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfSerialPort.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSerialPort"
+        mc:Ignorable="d"
+        Title="关于串口助手" Height="191.202" Width="361.803">
+    <Grid>
+        <StackPanel Height="31" VerticalAlignment="Top" HorizontalAlignment="Left" Width="334" Margin="10,0,0,0">
+            <TextBlock TextWrapping="Wrap" Text="串口调试助手" HorizontalAlignment="Center" Margin="113,0,142,0" Width="79"/>
+            <TextBlock TextWrapping="Wrap" Text="Serial Assistant" HorizontalAlignment="Center" Margin="101,0,142,0" Width="91"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="10,50,0,0" VerticalAlignment="Top" Width="334">
+            <TextBlock TextWrapping="Wrap" Text="版本来源：GitHub"/>
+            <TextBlock TextWrapping="Wrap" Text="更新日期：2017年12月26"/>
+            <TextBlock TextWrapping="Wrap" Text="小小说明：源码开发，用于学习c#基础编程"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

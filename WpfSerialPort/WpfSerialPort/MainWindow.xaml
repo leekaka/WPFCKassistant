@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSerialPort"
         mc:Ignorable="d"
-        Title="串口助手（@KK）" Height="496.481" Width="959.85">
+        Title="串口助手（@KK）" Height="500.481" Width="843.85">
     <Grid>
-        <GroupBox Header="发送区&#xD;&#xA;" HorizontalAlignment="Left" Height="58" Margin="241,294,0,0" VerticalAlignment="Top" Width="421">
+        <GroupBox Header="通信设置面板" HorizontalAlignment="Left" Height="424" Margin="680,24,0,0" VerticalAlignment="Top" Width="146"/>
+        <GroupBox Header="" HorizontalAlignment="Left" Height="90" Margin="694,177,0,0" VerticalAlignment="Top" Width="122"/>
+        <GroupBox x:Name="testSenddata" Header="发送内容&#xA;" HorizontalAlignment="Left" Height="75" Margin="694,341,0,0" VerticalAlignment="Top" Width="122"/>
+        <GroupBox x:Name="testSend" Header="发送方式&#xA;" HorizontalAlignment="Left" Height="65" Margin="694,269,0,0" VerticalAlignment="Top" Width="122"/>
+        <GroupBox x:Name="testShow" Header="显示方式" HorizontalAlignment="Left" Height="122" Margin="694,51,0,0" VerticalAlignment="Top" Width="122"/>
+        <GroupBox Header="自动发送时间设置&#xA;" HorizontalAlignment="Left" Height="62" Margin="241,372,0,0" VerticalAlignment="Top" Width="421"/>
+        <GroupBox Header="发送区&#xA;" HorizontalAlignment="Left" Height="58" Margin="241,294,0,0" VerticalAlignment="Top" Width="421">
             <Button x:Name="SendDataButton" Content="发送" HorizontalAlignment="Left" Margin="318,-2,0,0" VerticalAlignment="Top" Width="83" IsEnabled="False"/>
         </GroupBox>
         <GroupBox Header="接收区" HorizontalAlignment="Left" Height="270" Margin="241,24,0,0" VerticalAlignment="Top" Width="421"/>
@@ -17,7 +23,7 @@
                 <Button x:Name="OpenClosePortButton" Content="打开" Margin="0,10,107,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="76" IsEnabled="False"/>
             </Grid>
         </GroupBox>
-        <Menu x:Name="menuBar" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="959">
+        <Menu x:Name="menuBar" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="836">
             <MenuItem Header="设置(_S)">
                 <MenuItem Header="发送追加">
                     <RadioButton x:Name ="TestNoneRadioButton" Content="无" Tag="none" Click="TestNoneRadioButton_Click"/>
@@ -93,5 +99,27 @@
             <FlowDocument/>
         </RichTextBox>
         <TextBox x:Name="SendDataTextBox" HorizontalAlignment="Left" Height="23" Margin="252,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Text="Hello, world!"/>
+        <TextBlock HorizontalAlignment="Left" Margin="252,403,0,0" TextWrapping="Wrap" Text="自动发送时间间隔" VerticalAlignment="Top" Width="118"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="365,398,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="75"/>
+        <ComboBox HorizontalAlignment="Left" Margin="459,398,0,0" VerticalAlignment="Top" Width="80" SelectedIndex="0">
+            <ComboBoxItem Content="毫秒"/>
+            <ComboBoxItem Content="秒钟"/>
+            <ComboBoxItem Content="分钟"/>
+        </ComboBox>
+        <CheckBox Content="使能自动发送" HorizontalAlignment="Left" Margin="556,402,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RecvHexRadioButton" Content="十六进制" HorizontalAlignment="Left" Margin="710,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.187,-0.071" GroupName="testShow"/>
+        <RadioButton x:Name="RecvDecRadioButton" Content="十进制" HorizontalAlignment="Left" Margin="710,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.187,-0.071" GroupName="testShow"/>
+        <RadioButton x:Name="RecvBinRadioButton" Content="二进制" HorizontalAlignment="Left" Margin="710,152,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.187,-0.071" GroupName="testShow"/>
+        <RadioButton x:Name="RecvOctRadioButton" Content="八进制" HorizontalAlignment="Left" Margin="710,130,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.187,-0.071" GroupName="testShow"/>
+        <RadioButton x:Name="RecvCharacterRadioButton" Content="字符串" HorizontalAlignment="Left" Margin="710,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.187,-0.071" Tag="char" IsChecked="True" GroupName="testShow"/>
+        <CheckBox x:Name="ShowRecvDataCheckBox" Content="显示接收数据" HorizontalAlignment="Left" Margin="710,191,0,0" VerticalAlignment="Top" IsChecked="True"/>
+        <Button Content="保存接收区数据" HorizontalAlignment="Left" Margin="710,213,0,0" VerticalAlignment="Top" Width="92"/>
+        <Button Content="清空接收区" HorizontalAlignment="Left" Margin="710,239,0,0" VerticalAlignment="Top" Width="92"/>
+        <RadioButton x:Name="SendCharacterRadioButton" Content="字符串" HorizontalAlignment="Left" Margin="710,293,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.187,-0.071" Tag="char" IsChecked="True" GroupName="testSend"/>
+        <RadioButton x:Name="SendHexRadioButton" Content="十六进制" HorizontalAlignment="Left" Margin="710,315,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.187,-0.071" GroupName="testSend"/>
+        <RadioButton x:Name="LoadFileRadioButton" Content="加载文件" HorizontalAlignment="Left" Margin="710,392,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.604,-0.929" GroupName="testSenddata"/>
+        <RadioButton x:Name="ManualInputRadioButton" Content="手动输入" HorizontalAlignment="Left" Margin="710,369,0,0" VerticalAlignment="Top" GroupName="testSenddata" IsChecked="True"/>
+        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="1007,262,-155,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="ClearSendDataTextBox" Content="清空发送区" HorizontalAlignment="Left" Margin="701,421,0,0" VerticalAlignment="Top" Width="101"/>
     </Grid>
 </Window>
