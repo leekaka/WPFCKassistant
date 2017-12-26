@@ -5,9 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSerialPort"
         mc:Ignorable="d"
-        Title="串口助手（@KK）" Height="505.481" Width="938.85">
+        Title="串口助手（@KK）" Height="496.481" Width="959.85">
     <Grid>
-        <Menu x:Name="menuBar" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="931">
+        <GroupBox Header="发送区&#xD;&#xA;" HorizontalAlignment="Left" Height="58" Margin="241,294,0,0" VerticalAlignment="Top" Width="421">
+            <Button x:Name="SendDataButton" Content="发送" HorizontalAlignment="Left" Margin="318,-2,0,0" VerticalAlignment="Top" Width="83" IsEnabled="False"/>
+        </GroupBox>
+        <GroupBox Header="接收区" HorizontalAlignment="Left" Height="270" Margin="241,24,0,0" VerticalAlignment="Top" Width="421"/>
+        <GroupBox Header="串口配置面板" HorizontalAlignment="Left" Height="424" VerticalAlignment="Top" Width="228" Margin="8,24,0,0">
+            <Grid HorizontalAlignment="Left" Height="40" Margin="10,364,0,-2" VerticalAlignment="Top" Width="193">
+                <Button x:Name="FindPortButton" Content="查找" Margin="100,10,0,11" HorizontalAlignment="Left" Width="83"/>
+                <Button x:Name="OpenClosePortButton" Content="打开" Margin="0,10,107,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="76" IsEnabled="False"/>
+            </Grid>
+        </GroupBox>
+        <Menu x:Name="menuBar" HorizontalAlignment="Left" Height="19" VerticalAlignment="Top" Width="959">
             <MenuItem Header="设置(_S)">
                 <MenuItem Header="发送追加">
                     <RadioButton x:Name ="TestNoneRadioButton" Content="无" Tag="none" Click="TestNoneRadioButton_Click"/>
@@ -28,12 +38,12 @@
             </MenuItem>
             <MenuItem Header="文件(_F)"/>
         </Menu>
-        <TextBlock HorizontalAlignment="Left" Margin="24,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="可用端"/><Run Text="口"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="24,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="通讯波特率"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="24,95,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="奇偶校验率"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="数据位"/>
-        <TextBlock HorizontalAlignment="Left" Margin="24,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.438,2.167" Height="14"><Run Text="停止位"/><LineBreak/><Run/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="24,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.438,2.167" Height="14" Text="字节编码"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="可用端"/><Run Text="口"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="24,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="16"><Run Text="通讯波特率"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="24,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="奇偶校验率"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="数据位"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.438,2.167" Height="14"><Run Text="停止位"/><LineBreak/><Run/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="24,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.438,2.167" Height="14" Text="字节编码"/>
         <ComboBox HorizontalAlignment="Left" Margin="102,43,0,0" VerticalAlignment="Top" Width="120"/>
         <ComboBox HorizontalAlignment="Left" Margin="102,173,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
             <ComboBoxItem Content="Default"/>
@@ -68,6 +78,20 @@
             <ComboBoxItem Content="38400"/>
             <ComboBoxItem Content="115200"/>
         </ComboBox>
-        <GroupBox x:Name="SerialPortConfigPanel" Header="串口配置面板" HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="255" Margin="0,24,0,0"/>
+        <StatusBar HorizontalAlignment="Left" Height="22" Margin="0,448,0,0" VerticalAlignment="Top" Width="959" Background="#FF007ACC">
+            <TextBlock TextWrapping="Wrap" Text="欢迎使用串口助手！" Foreground="White"/>
+        </StatusBar>
+        <TextBlock Margin="24,224,0,0" TextWrapping="Wrap" Text="主要功能：" FontSize="14" VerticalAlignment="Top" Foreground="#FF0078D7" HorizontalAlignment="Left" Width="212"/>
+        <TextBlock Margin="24,247,0,0" TextWrapping="Wrap" Text="1.可自由显示、隐藏的设置面板" VerticalAlignment="Top" HorizontalAlignment="Left" Width="212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,267,0,0" TextWrapping="Wrap" Text="2.简洁视图模式，专注于数据收发" VerticalAlignment="Top" Width="212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,287,0,0" TextWrapping="Wrap" Text="3.软件主要配置可保存并恢复" VerticalAlignment="Top" Width="212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,307,0,0" TextWrapping="Wrap" Text="快捷键提示：" VerticalAlignment="Top" Foreground="#FF0078D7" FontSize="14" Width="212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,330,0,0" TextWrapping="Wrap" Text="1.Ctrl + S :保存接收区数据" VerticalAlignment="Top" Width="212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,350,0,0" TextWrapping="Wrap" Text="2.Ctrl + Enter : 进/退简洁视图 " VerticalAlignment="Top" RenderTransformOrigin="-0.291,-0.933" Width="212"/>
+        <TextBlock HorizontalAlignment="Left" Margin="24,370,0,0" TextWrapping="Wrap" Text="3.Enter：发送数据" VerticalAlignment="Top" RenderTransformOrigin="-0.191,-0.433" Width="212"/>
+        <RichTextBox x:Name="RecvDataRichTextBox" HorizontalAlignment="Left" Height="239" Margin="252,43,0,0" VerticalAlignment="Top" Width="401">
+            <FlowDocument/>
+        </RichTextBox>
+        <TextBox x:Name="SendDataTextBox" HorizontalAlignment="Left" Height="23" Margin="252,322,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" Text="Hello, world!"/>
     </Grid>
 </Window>
